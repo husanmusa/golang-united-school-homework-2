@@ -5,10 +5,9 @@ import "math"
 type sides int
 
 const (
-	SidesTriangle = sides(3)
-	SidesSquare   = sides(4)
-	SidesCircle   = sides(0)
-	Pi            = 3.14
+	SidesTriangle sides = 3
+	SidesSquare   sides = 4
+	SidesCircle   sides = 0
 )
 
 func CalcSquare(sideLen float64, sidesNum sides) float64 {
@@ -19,7 +18,7 @@ func CalcSquare(sideLen float64, sidesNum sides) float64 {
 		return math.Sqrt(3) / 4.0 * sideLen * sideLen
 	}
 	if sidesNum == SidesCircle {
-		return Pi * sideLen * sideLen
+		return math.Pi * sideLen * sideLen
 	}
 
 	return 0
